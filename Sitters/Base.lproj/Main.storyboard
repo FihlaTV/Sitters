@@ -38,7 +38,7 @@
                                     <action selector="SignInUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdM-z7-c0u"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVO-jb-rbP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="remi12" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVO-jb-rbP">
                                 <rect key="frame" x="87.5" y="241" width="200" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bMS-wz-K6x"/>
@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-oO-fyg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="remi@yahoo.com" borderStyle="roundedRect" placeholder="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-oO-fyg">
                                 <rect key="frame" x="87.5" y="178" width="200" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Bw-Tn-jS9"/>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="1743" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--User Acc View Controller-->
         <scene sceneID="bLN-Yr-21w">
             <objects>
-                <viewController id="aiM-hx-GKQ" sceneMemberID="viewController">
+                <viewController id="aiM-hx-GKQ" customClass="userAccViewController" customModule="Sitters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VBb-wb-qei"/>
                         <viewControllerLayoutGuide type="bottom" id="pux-gJ-YQC"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="3464.8000000000002" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Review View Controller-->
         <scene sceneID="Vqo-Mj-Ter">
             <objects>
-                <viewController id="6FN-sc-WYp" sceneMemberID="viewController">
+                <viewController id="6FN-sc-WYp" customClass="imageReviewViewController" customModule="Sitters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sds-wR-Hn5"/>
                         <viewControllerLayoutGuide type="bottom" id="OlJ-z3-wuF"/>
@@ -169,8 +169,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UOF-KQ-Irf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo-58997.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UOF-KQ-Irf">
                                 <rect key="frame" x="47.5" y="84" width="280" height="150"/>
+                                <color key="backgroundColor" red="0.73411188471502586" green="0.73411188471502586" blue="0.73411188471502586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="6Dh-Sx-zy0"/>
                                     <constraint firstAttribute="width" constant="280" id="6zx-c2-pr3"/>
@@ -186,8 +187,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXL-dg-EJQ">
-                                <rect key="frame" x="172" y="314" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
+                                <rect key="frame" x="171" y="314" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="6FN-sc-WYp" eventType="touchUpInside" id="Pqr-OW-lXN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,14 +208,61 @@
                     </view>
                     <navigationItem key="navigationItem" id="A2i-5z-u9C">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="TZg-7h-tDB"/>
-                            <barButtonItem title="Photos" id="awD-em-6uS"/>
+                            <barButtonItem systemItem="camera" id="TZg-7h-tDB">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="6FN-sc-WYp" id="7PA-b3-EBD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="awD-em-6uS">
+                                <connections>
+                                    <action selector="photosTapped:" destination="6FN-sc-WYp" id="wqc-JD-HWE"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="UOF-KQ-Irf" id="sUq-Ky-TsN"/>
+                        <outlet property="nextButton" destination="OXL-dg-EJQ" id="tlY-zM-A9j"/>
+                        <outlet property="reviewTextField" destination="Wy4-6b-Hg4" id="zuk-3v-IKS"/>
+                        <segue destination="iXB-Xg-9Nz" kind="show" identifier="selectuserSegue" id="1hu-aj-Ah7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8E-p7-Bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4221.6000000000004" y="36.431784107946029"/>
+            <point key="canvasLocation" x="4318" y="36"/>
+        </scene>
+        <!--User Acc View Controller-->
+        <scene sceneID="ESj-t6-tHk">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iXB-Xg-9Nz" customClass="userAccViewController" customModule="Sitters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q0p-On-h7b"/>
+                        <viewControllerLayoutGuide type="bottom" id="85b-Kk-aUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="33g-td-5kw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFJ-Vc-HNS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dFJ-Vc-HNS" firstAttribute="top" secondItem="Q0p-On-h7b" secondAttribute="bottom" id="8Mn-bw-4Ff"/>
+                            <constraint firstItem="dFJ-Vc-HNS" firstAttribute="leading" secondItem="33g-td-5kw" secondAttribute="leading" id="aIh-vB-mgP"/>
+                            <constraint firstAttribute="trailing" secondItem="dFJ-Vc-HNS" secondAttribute="trailing" id="dhh-hj-ozx"/>
+                            <constraint firstItem="85b-Kk-aUE" firstAttribute="top" secondItem="dFJ-Vc-HNS" secondAttribute="bottom" id="ngY-mx-eLS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="dFJ-Vc-HNS" id="jwv-Eb-OeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9V-kg-bdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5132" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcA-mE-LDg">
@@ -250,4 +301,7 @@
             <point key="canvasLocation" x="2525.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pexels-photo-58997.jpeg" width="2048" height="1365"/>
+    </resources>
 </document>

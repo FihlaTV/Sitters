@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignInViewController: UIViewController {
 
@@ -36,6 +37,8 @@ class SignInViewController: UIViewController {
                 })
             } else {
                 print("Signed in Successfully")
+                
+                Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email)
                 self.performSegue(withIdentifier: "SigninSegue", sender: nil)
             }
         }
