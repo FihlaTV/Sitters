@@ -29,7 +29,7 @@ class imageReviewViewController: UIViewController, UIImagePickerControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info [UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = image
-        imageView.backgroundColor = UIColor.clear
+        imageView.backgroundColor = UIColor.blue
         imagePicker.dismiss(animated: true, completion: nil)
     }
 

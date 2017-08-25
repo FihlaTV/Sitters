@@ -12,9 +12,11 @@ import Firebase
 import FirebaseAuth
 
 class customerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    @IBOutlet weak var imgBackground: UIImageView!
 
     @IBOutlet weak var tableView: UITableView!
     var reviews: [Review] = []
+    let pets = ["dogWalker", "dog"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,30 +25,22 @@ class customerViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         
-        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("reviews").observe(DataEventType.childAdded, with: {(snapshot) in
-            print(snapshot)
-            
-            let review = Review()
-            let value = snapshot.value as? NSDictionary
-            review.imageURL = value? ["imageURL"] as? String ?? ""
-            review.from = value! ["from"] as! String
-            review.rev = value! ["customerreview"] as! String
-            
-            self.reviews.append(review)
-            self.tableView.reloadData()
-        })
-
+        imgBackground.image = UIImage(named: "dog.jpeg")
+        
+      
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return reviews.count
+      return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let review = reviews[indexPath.row]
-        cell.textLabel!.text = review.from
+       
+        
+  let cell = UITableViewCell()
         return cell
+        
+
         
     }
     
