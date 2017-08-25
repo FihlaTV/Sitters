@@ -18,6 +18,12 @@
 		A5F1CCC81F4CA0E9002C18B3 /* imageReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1CCC71F4CA0E9002C18B3 /* imageReviewViewController.swift */; };
 		A5F1CCCA1F4CBFC1002C18B3 /* pexels-photo-58997.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A5F1CCC91F4CBFC1002C18B3 /* pexels-photo-58997.jpeg */; };
 		A5F1CCCC1F4CC824002C18B3 /* userAccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1CCCB1F4CC824002C18B3 /* userAccViewController.swift */; };
+		A5F1CCCE1F4E9D79002C18B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1CCCD1F4E9D79002C18B3 /* User.swift */; };
+		A5FF14DB1F4F481600F94012 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF14DA1F4F481600F94012 /* SelectUserViewController.swift */; };
+		A5FF14DD1F4F5B3800F94012 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF14DC1F4F5B3800F94012 /* Review.swift */; };
+		A5FF14DF1F4F64A900F94012 /* ViewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF14DE1F4F64A900F94012 /* ViewImageViewController.swift */; };
+		A5FF14E11F4FF75000F94012 /* contactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF14E01F4FF75000F94012 /* contactUsViewController.swift */; };
+		A5FF14E31F4FFF0500F94012 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF14E21F4FFF0500F94012 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		A5F1CCC71F4CA0E9002C18B3 /* imageReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageReviewViewController.swift; sourceTree = "<group>"; };
 		A5F1CCC91F4CBFC1002C18B3 /* pexels-photo-58997.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pexels-photo-58997.jpeg"; path = "../pexels-photo-58997.jpeg"; sourceTree = "<group>"; };
 		A5F1CCCB1F4CC824002C18B3 /* userAccViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userAccViewController.swift; sourceTree = "<group>"; };
+		A5F1CCCD1F4E9D79002C18B3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A5FF14DA1F4F481600F94012 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		A5FF14DC1F4F5B3800F94012 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		A5FF14DE1F4F64A900F94012 /* ViewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewImageViewController.swift; sourceTree = "<group>"; };
+		A5FF14E01F4FF75000F94012 /* contactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactUsViewController.swift; sourceTree = "<group>"; };
+		A5FF14E21F4FFF0500F94012 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		AC23C0EA4A0D502F5059DF88 /* Pods_Sitters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sitters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E7DF80604C99018138C544 /* Pods-Sitters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sitters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sitters/Pods-Sitters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,12 +100,10 @@
 		A50D9C2B1F4A46FD007FED3F /* Sitters */ = {
 			isa = PBXGroup;
 			children = (
+				A5F1CCCF1F4E9DF6002C18B3 /* Viewcontroller */,
 				A5F1CCC91F4CBFC1002C18B3 /* pexels-photo-58997.jpeg */,
+				A5F1CCD01F4E9E47002C18B3 /* Models */,
 				A50D9C2C1F4A46FD007FED3F /* AppDelegate.swift */,
-				A50D9C2E1F4A46FD007FED3F /* SignInViewController.swift */,
-				A50DB9DF1F4B9E27007FED3F /* customerViewController.swift */,
-				A5F1CCC71F4CA0E9002C18B3 /* imageReviewViewController.swift */,
-				A5F1CCCB1F4CC824002C18B3 /* userAccViewController.swift */,
 				A50D9C301F4A46FD007FED3F /* Main.storyboard */,
 				A50D9C331F4A46FD007FED3F /* Assets.xcassets */,
 				A50D9C351F4A46FD007FED3F /* LaunchScreen.storyboard */,
@@ -101,6 +111,30 @@
 				A50DB9DD1F4A5726007FED3F /* GoogleService-Info.plist */,
 			);
 			path = Sitters;
+			sourceTree = "<group>";
+		};
+		A5F1CCCF1F4E9DF6002C18B3 /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF14E01F4FF75000F94012 /* contactUsViewController.swift */,
+				A50D9C2E1F4A46FD007FED3F /* SignInViewController.swift */,
+				A50DB9DF1F4B9E27007FED3F /* customerViewController.swift */,
+				A5F1CCC71F4CA0E9002C18B3 /* imageReviewViewController.swift */,
+				A5F1CCCB1F4CC824002C18B3 /* userAccViewController.swift */,
+				A5FF14DA1F4F481600F94012 /* SelectUserViewController.swift */,
+				A5FF14DE1F4F64A900F94012 /* ViewImageViewController.swift */,
+				A5FF14E21F4FFF0500F94012 /* AboutUsViewController.swift */,
+			);
+			name = Viewcontroller;
+			sourceTree = "<group>";
+		};
+		A5F1CCD01F4E9E47002C18B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5F1CCCD1F4E9D79002C18B3 /* User.swift */,
+				A5FF14DC1F4F5B3800F94012 /* Review.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,9 +275,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50DB9E01F4B9E27007FED3F /* customerViewController.swift in Sources */,
+				A5FF14DD1F4F5B3800F94012 /* Review.swift in Sources */,
 				A50D9C2F1F4A46FD007FED3F /* SignInViewController.swift in Sources */,
+				A5FF14E11F4FF75000F94012 /* contactUsViewController.swift in Sources */,
+				A5FF14DF1F4F64A900F94012 /* ViewImageViewController.swift in Sources */,
+				A5F1CCCE1F4E9D79002C18B3 /* User.swift in Sources */,
+				A5FF14DB1F4F481600F94012 /* SelectUserViewController.swift in Sources */,
 				A5F1CCCC1F4CC824002C18B3 /* userAccViewController.swift in Sources */,
 				A5F1CCC81F4CA0E9002C18B3 /* imageReviewViewController.swift in Sources */,
+				A5FF14E31F4FFF0500F94012 /* AboutUsViewController.swift in Sources */,
 				A50D9C2D1F4A46FD007FED3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

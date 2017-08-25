@@ -59,7 +59,7 @@ class imageReviewViewController: UIViewController, UIImagePickerControllerDelega
                 
             }else{
                 print(metadata?.downloadURL() ?? 0.1)
-                self.performSegue(withIdentifier: "selectuserSegue", sender: nil)
+                self.performSegue(withIdentifier: "selectuserSegue", sender: metadata!.downloadURL()!.absoluteString)
             }
 
         }
@@ -71,6 +71,9 @@ class imageReviewViewController: UIViewController, UIImagePickerControllerDelega
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! SelectUserViewController
+        nextVC.imageURL = sender as! String
+        nextVC.review = reviewTextField.text!
         
     }
 }

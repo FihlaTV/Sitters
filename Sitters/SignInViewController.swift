@@ -32,17 +32,30 @@ class SignInViewController: UIViewController {
                         print("Hey we have an error:\(String(describing: error))")
                     } else {
                         print("Created user Successfully")
+                        Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email)
                         self.performSegue(withIdentifier: "SigninSegue", sender: nil)
                     }
                 })
             } else {
                 print("Signed in Successfully")
                 
-                Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email)
                 self.performSegue(withIdentifier: "SigninSegue", sender: nil)
             }
         }
         
+    }
+    
+    
+    @IBAction func contactUsTapped(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func aboutUsTapped(_ sender: Any) {
+       
+    }
+    
+    @IBAction func privacyPoliceTapped(_ sender: Any) {
     }
     
 }
